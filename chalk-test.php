@@ -4,13 +4,15 @@
  * Author: Nick Amirault
  * Github: https://github.com/nickamirault/chalktest.git
  * Description: A code test for chalk,  parses a json response from a server
- *              and outputs a grouped response in html. 
+ *              and outputs a grouped response in html. Developed with OOP in mind.
+ *				I would have liked to get more time on this to make the output
+ *				a bit more pretty. But i'm finishing up a contract at the same time. 
+ *				I did manage to get one of the bonus items working,  the api key
+ *  			under the admin settings.
  *				
  */
  
  
-
-
  /****************************Chalk_Test****************************************
  The main entry class, handles the shortcode which starts the plugin execution.
  *******************************************************************************/
