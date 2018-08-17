@@ -9,6 +9,7 @@
  *				a bit more pretty. But i'm finishing up a contract at the same time. 
  *				I did manage to get one of the bonus items working,  the api key
  *  			under the admin settings.
+ * shortcode [chalk-test]
  *				
  */
  
