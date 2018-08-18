@@ -45,7 +45,6 @@ class Chalk_Test_Work{
 			$conference='';
 			$division='';
 			
-			//I would normally link to an external CSS file instead of adding inline CSS
 			echo '<ul class="chalklist">';
 								
 			foreach ($team_data as $teams) { 
