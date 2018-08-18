@@ -6,7 +6,25 @@
  *******************************************************************************/
   
 class Chalk_Test_Work{
-		
+	
+	//load everyghing needed for this class
+	Public function __construct() {
+		$this->load_hooks();
+	}
+	
+	//add the hooks for this class
+	private function load_hooks(){
+		//hook to load CSS file 
+		add_action( 'wp_enqueue_scripts', array($this,'chalk_load_css'));
+	}
+	
+	//loads the CSS file for this class
+	public function chalk_load_css(){
+		$url = plugin_dir_url( __FILE__ );
+		wp_enqueue_style( 'chalktest', $url . 'css/chalk_test.css' );
+	}
+	
+	
 	//parses the array and outputs the html, just in unordered list for an example
 	private function output_html($team_array){
 				
@@ -28,22 +46,22 @@ class Chalk_Test_Work{
 			$division='';
 			
 			//I would normally link to an external CSS file instead of adding inline CSS
-			echo '<ul style="list-style: none;">';
+			echo '<ul class="chalklist">';
 								
 			foreach ($team_data as $teams) { 
 				//Catch a new Conference and set as a header
 				if ($conference <> $teams["conference"]){
 					$conference = $teams["conference"];
-					echo '<h1><strong>' . $conference . '</strong></h1></p>';
+					echo '<h1 class="chalklist_h1">' . $conference . '</h1></p>';
 				}
 				//Catch a new division and set as a new sub-header
 				if ($division <> $teams["division"]){
 					$division = $teams["division"];
-					echo '<div style="padding-left:20px;"><strong>' . $division . '</strong></div>';
+					echo '<div class="chalklist_subheader">' . $division . '</div>';
 				}
 				
 				//print the city of the team
-				echo '<li style=padding-left:70px;">'.$teams["name"] .  '</li>';
+				echo '<li class="chalklist_city">'.$teams["name"] .  '</li>';
 			}
 			
 			echo '</ul>';
@@ -58,6 +76,7 @@ class Chalk_Test_Work{
 		
 		//error out if theres a problem
 		if( is_wp_error( $url_request ) ) {
+			echo 'Error: loading '.$url.$key;
 			return false; 
 		}
 		

@@ -3,12 +3,11 @@
  * Plugin Name: Chalk Code Test
  * Author: Nick Amirault
  * Github: https://github.com/nickamirault/chalktest.git
- * Description: A code test for chalk,  parses a json response from a server
+ * Description: A code test for chalk,  parses a json response from server
  *              and outputs a grouped response in html. Developed with OOP in mind.
- *				I would have liked to get more time on this to make the output
- *				a bit more pretty. But i'm finishing up a contract at the same time. 
- *				I did manage to get one of the bonus items working,  the api key
- *  			under the admin settings.
+ *				I would have liked to get more time on this to pretty up the output
+ *				a bit more. But i'm finishing up a contract at the same time. 
+ *			
  * shortcode [chalk-test]
  *				
  */

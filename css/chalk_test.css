@@ -1,0 +1,16 @@
+.chalklist{
+	list-style: none;
+}
+
+.chalklist_subheader{
+	padding-left:20px;
+	font-weight: bold;
+}
+
+.chalklist_h1{
+	font-weight: bold;
+}
+
+.chalklist_city{
+	padding-left:70px;
+}
